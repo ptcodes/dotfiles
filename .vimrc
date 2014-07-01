@@ -5,12 +5,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
 Bundle 'tpope/vim-rails'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdcommenter'
 Bundle "jwhitley/vim-matchit"
 Bundle "ervandew/supertab"
-Bundle "jnwhiteh/vim-golang"
 Bundle "wincent/Command-T"
 Bundle "kchmck/vim-coffee-script"
 call vundle#end() 
