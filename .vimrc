@@ -7,12 +7,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Bundle 'tpope/vim-rails'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdcommenter'
+Bundle "kchmck/vim-coffee-script"
 Bundle "jwhitley/vim-matchit"
+Bundle 'scrooloose/nerdcommenter'
 Bundle "ervandew/supertab"
 Bundle "wincent/Command-T"
-Bundle "kchmck/vim-coffee-script"
 call vundle#end() 
 
 filetype plugin indent on " Enable filetype plugins
