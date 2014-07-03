@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
+Plugin 'chriskempson/vim-tomorrow-theme'
 Bundle 'tpope/vim-rails'
 Bundle "kchmck/vim-coffee-script"
 Bundle "jwhitley/vim-matchit"
@@ -18,7 +19,6 @@ call vundle#end()
 filetype plugin indent on " Enable filetype plugins
 
 syntax enable " Enable syntax highlighting
-set background=dark
 colorscheme Tomorrow-Night
 
 set history=5000 " Remember more commands and search history
