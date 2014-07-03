@@ -8,12 +8,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/vim-tomorrow-theme'
-Bundle 'tpope/vim-rails'
-Bundle "kchmck/vim-coffee-script"
-Bundle "jwhitley/vim-matchit"
-Bundle 'scrooloose/nerdcommenter'
-Bundle "ervandew/supertab"
-Bundle "wincent/Command-T"
+Plugin 'tpope/vim-rails'
+Plugin "kchmck/vim-coffee-script"
+Plugin "jwhitley/vim-matchit"
+Plugin 'scrooloose/nerdcommenter'
+Plugin "ervandew/supertab"
+Plugin "wincent/Command-T"
 call vundle#end() 
 
 filetype plugin indent on " Enable filetype plugins
