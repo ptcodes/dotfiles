@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle "kchmck/vim-coffee-script"
 Bundle "jwhitley/vim-matchit"
