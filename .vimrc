@@ -9,16 +9,17 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'tpope/vim-rails'
-Plugin "kchmck/vim-coffee-script"
-Plugin "jwhitley/vim-matchit"
+Plugin 'kchmck/vim-coffee-scriptr'
+Plugin 'jwhitley/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
-Plugin "ervandew/supertab"
-Plugin "wincent/Command-T"
+Plugin 'ervandew/supertab'
+Plugin 'wincent/Command-T'
 call vundle#end() 
 
 filetype plugin indent on " Enable filetype plugins
 
 syntax enable " Enable syntax highlighting
+set background=dark
 colorscheme Tomorrow-Night
 
 set history=5000 " Remember more commands and search history
@@ -28,22 +29,19 @@ set ignorecase " Ignore case when searching
 set number " Show string numbers
 set ruler " Show the current cursor position at the bottom right corner
 set shell=bash
+set encoding=utf8 " Set utf8 as standard encoding 
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
+set nobackup " Don't keep backup files, everything is in git anyway
+set nowb 
+set noswapfile " Don't write annoying swap files
 
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set ai " Auto indent
+set si " Smart indent
+set wrap " Wrap lines
 
 
 " Set the leader key
