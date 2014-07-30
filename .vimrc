@@ -7,13 +7,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'tpope/vim-rails'
-Plugin 'kchmck/vim-coffee-scriptr'
 Plugin 'jwhitley/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'wincent/Command-T'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-endwise'  " adds end after if, do, def in Ruby
 call vundle#end() 
 
 filetype plugin indent on " Enable filetype plugins
