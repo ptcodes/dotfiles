@@ -5,13 +5,14 @@ syntax on
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rhysd/vim-crystal'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'jwhitley/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'wincent/Command-T'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
+Plugin 'slim-template/vim-slim.git'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'mtscout6/vim-cjsx'
@@ -21,6 +22,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'tomlion/vim-solidity'
+Plugin 'kien/ctrlp.vim'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'hashivim/vim-terraform'
 call vundle#end() 
 
 filetype plugin indent on
@@ -58,6 +66,9 @@ map <Leader>r :!ruby %<CR>
 " Run the current file against rspec
 map <Leader>s :!rspec -c %<CR>
 
+" Change the default mapping and the default command to invoke CtrlP:
+nnoremap <leader>p :CtrlP<CR>
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -77,3 +88,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 let g:jsx_ext_required = 0
 
 set laststatus=2 " Show vimairline
+" let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 1
+
+autocmd BufNewFile,BufRead *.slim set ft=slim " For vim-slim to make highlighting work
