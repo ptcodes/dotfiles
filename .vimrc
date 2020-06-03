@@ -34,26 +34,24 @@ call vundle#end()
 filetype plugin indent on
 colorscheme Tomorrow-Night
 
-set history=5000 " Remember more commands and search history
-set expandtab " Use spaces instead of tabs
-set hlsearch " Highlight search results
-set ignorecase " Ignore case when searching
-set number " Show string numbers
-set ruler " Show the current cursor position at the bottom right corner
+set encoding=utf8  " Set utf8 as the default encoding 
+set history=5000   " Increase history size
+set hlsearch       " Highlight search results
+set ignorecase     " Ignore case when searching
+set number         " Show line numbers
+set ruler          " Show the current cursor position at the bottom right corner
 set shell=bash
-set encoding=utf8 " Set utf8 as standard encoding 
 
-set nobackup " Do not keep backup files, everything is in git anyway
+set nobackup       " Do not keep backup files, everything is in git
 set nowb 
-set noswapfile " Do not write annoying swap files
-
-" 1 tab == 2 spaces
-set shiftwidth=2
+set noswapfile     " Do not create annoying swap files
+set expandtab      " Use spaces instead of tabs
+set shiftwidth=2   " 1 tab == 2 spaces
 set tabstop=2
-
-set ai " Auto indent
-set si " Smart indent
-set wrap " Wrap lines
+set ai             " Auto indent
+set si             " Smart indent
+set wrap           " Wrap lines
+set spell          " Spell and grammar checker
 
 set clipboard+=unnamed " Copy across different instances of vim
 
@@ -87,8 +85,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 let g:jsx_ext_required = 0
 
-set laststatus=2 " Show vimairline
-" let g:instant_markdown_slow = 1
 let g:instant_markdown_autostart = 1
 
 autocmd BufNewFile,BufRead *.slim set ft=slim " For vim-slim to make highlighting work
