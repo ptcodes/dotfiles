@@ -34,23 +34,22 @@ call vundle#end()
 filetype plugin indent on
 colorscheme Tomorrow-Night
 
-set encoding=utf8  " Set utf8 as the default encoding 
-set history=5000   " Increase history size
-set hlsearch       " Highlight search results
-set ignorecase     " Ignore case when searching
-set number         " Show line numbers
-set ruler          " Show the current cursor position at the bottom right corner
-set shell=bash
-
-set nobackup       " Do not keep backup files, everything is in git
+set encoding=utf8      " Set utf8 as the default encoding
+set history=5000       " Increase history size
+set hlsearch           " Highlight search results
+set ignorecase         " Ignore case when searching
+set number             " Show line numbers
+set ruler              " Show the current cursor position at the bottom right corner
+set shell=/bin/zsh     " Set shell
+set nobackup           " Do not keep backup files, everything is in git
 set nowb 
-set noswapfile     " Do not create annoying swap files
-set expandtab      " Use spaces instead of tabs
-set shiftwidth=2   " 1 tab == 2 spaces
+set noswapfile         " Do not create annoying swap files
+set expandtab          " Use spaces instead of tabs
+set shiftwidth=2       " 1 tab == 2 spaces
 set tabstop=2
-set ai             " Auto indent
-set si             " Smart indent
-set wrap           " Wrap lines
+set ai                 " Auto indent
+set si                 " Smart indent
+set wrap               " Wrap lines
 set clipboard+=unnamed " Copy across different instances of vim
 
 " Spell-checking for Markdown files only
@@ -88,4 +87,5 @@ let g:jsx_ext_required = 0
 
 let g:instant_markdown_autostart = 1
 
-autocmd BufNewFile,BufRead *.slim set ft=slim " For vim-slim to make highlighting work
+" For vim-slim to make highlighting work
+autocmd BufNewFile,BufRead *.slim set ft=slim 
