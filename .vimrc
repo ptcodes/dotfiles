@@ -1,6 +1,5 @@
 set nocompatible      " We're running Vim, not Vi!
 filetype off
-syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 
@@ -29,28 +28,36 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'hashivim/vim-terraform'
+Plugin 'vimwiki/vimwiki'
 call vundle#end() 
 
-filetype plugin indent on
 colorscheme Tomorrow-Night
 
-set encoding=utf8      " Set utf8 as the default encoding
-set history=5000       " Increase history size
-set hlsearch           " Highlight search results
-set ignorecase         " Ignore case when searching
-set number             " Show line numbers
-set ruler              " Show the current cursor position at the bottom right corner
-set shell=/bin/zsh     " Set shell
-set nobackup           " Do not keep backup files, everything is in git
+filetype plugin indent on  " Load plugins according to detected filetype
+syntax on                  " Enable syntax highlighting
+
+set encoding=utf8          " Set utf8 as the default encoding
+set history=5000           " Increase history size
+set hlsearch               " Highlight search results
+set ignorecase             " Ignore case when searching
+set number                 " Show line numbers
+set ruler                  " Show the current cursor position at the bottom right corner
+set shell=/bin/zsh         " Set shell
+set nobackup               " Do not keep backup files, everything is in git
 set nowb 
-set noswapfile         " Do not create annoying swap files
-set expandtab          " Use spaces instead of tabs
-set shiftwidth=2       " 1 tab == 2 spaces
+set noswapfile             " Do not create annoying swap files
+set autoindent             " Auto indent according to previous line
+set expandtab              " Use spaces instead of tabs
+set shiftwidth=2           " Tab key indents 2 spaces
 set tabstop=2
-set ai                 " Auto indent
-set si                 " Smart indent
-set wrap               " Wrap lines
-set clipboard+=unnamed " Copy across different instances of vim
+set si                     " Smart indent
+set wrap                   " Wrap lines
+set clipboard+=unnamed     " Copy across different instances of vim
+set hidden                 " Switch between buffers without having to save first.
+set cursorline             " Find the current line quickly
+set incsearch              " Highlight while searching with / or ?.
+set hlsearch               " Keep matches highlighted.
+
 
 " Spell-checking for Markdown files only
 autocmd BufRead,BufNewFile *.md setlocal spell
