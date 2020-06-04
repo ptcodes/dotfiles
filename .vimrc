@@ -51,9 +51,10 @@ set tabstop=2
 set ai             " Auto indent
 set si             " Smart indent
 set wrap           " Wrap lines
-set spell          " Spell and grammar checker
-
 set clipboard+=unnamed " Copy across different instances of vim
+
+" Spell-checking for Markdown files only
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Set the leader key
 let mapleader = ","
