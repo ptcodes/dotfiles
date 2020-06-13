@@ -29,6 +29,8 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'hashivim/vim-terraform'
 Plugin 'vimwiki/vimwiki'
+Plugin 'fatih/vim-go'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end() 
 
 colorscheme Tomorrow-Night
@@ -44,7 +46,7 @@ set number                 " Show line numbers
 set ruler                  " Show the current cursor position at the bottom right corner
 set shell=/bin/zsh         " Set shell
 set nobackup               " Do not keep backup files, everything is in git
-set nowb 
+set nowritebackup
 set noswapfile             " Do not create annoying swap files
 set autoindent             " Auto indent according to previous line
 set expandtab              " Use spaces instead of tabs
@@ -53,11 +55,13 @@ set tabstop=2
 set si                     " Smart indent
 set wrap                   " Wrap lines
 set clipboard+=unnamed     " Copy across different instances of vim
-set hidden                 " Switch between buffers without having to save first.
+set hidden                 " Switch between buffers without having to save first
 set cursorline             " Find the current line quickly
 set incsearch              " Highlight while searching with / or ?.
-set hlsearch               " Keep matches highlighted.
+set hlsearch               " Keep matches highlighted
 
+set ttyfast                " Faster redrawing
+set lazyredraw             " Only redraw when necessary
 
 " Spell-checking for Markdown files only
 autocmd BufRead,BufNewFile *.md setlocal spell
@@ -92,7 +96,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 let g:jsx_ext_required = 0
 
-let g:instant_markdown_autostart = 1
+" let g:instant_markdown_autostart = 1
 
 " For vim-slim to make highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim 
