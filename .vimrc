@@ -100,3 +100,6 @@ let g:jsx_ext_required = 0
 
 " For vim-slim to make highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim 
+
+" disable running gopls (from vim-go plugin)
+let g:go_gopls_enabled = 0
