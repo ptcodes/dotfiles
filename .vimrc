@@ -69,11 +69,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Set the leader key
 let mapleader = ","
 
-" Run the current file against ruby
-map <Leader>r :!ruby %<CR>
-
-" Run the current file against rspec
-map <Leader>s :!rspec -c %<CR>
+map <Leader>r :!ruby %<CR>      " Run the current file against ruby
+map <Leader>s :!rspec -c %<CR>  " Run the current file against rspec
+map <Leader>g :!go run %<CR>    " Run the current file again go
 
 " Change the default mapping and the default command to invoke CtrlP:
 nnoremap <leader>p :CtrlP<CR>
@@ -103,3 +101,6 @@ autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " disable running gopls (from vim-go plugin)
 let g:go_gopls_enabled = 0
+
+" run goimports on save
+let g:go_fmt_command = "goimports"
