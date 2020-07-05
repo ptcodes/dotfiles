@@ -31,7 +31,7 @@ Plugin 'hashivim/vim-terraform'
 Plugin 'vimwiki/vimwiki'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
-call vundle#end() 
+call vundle#end()
 
 colorscheme Tomorrow-Night
 
@@ -88,7 +88,7 @@ nnoremap <leader><leader> <c-^>
 " Clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
@@ -97,10 +97,14 @@ let g:jsx_ext_required = 0
 " let g:instant_markdown_autostart = 1
 
 " For vim-slim to make highlighting work
-autocmd BufNewFile,BufRead *.slim set ft=slim 
+autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " disable running gopls (from vim-go plugin)
-let g:go_gopls_enabled = 0
+" let g:go_gopls_enabled = 0
 
 " run goimports on save
 let g:go_fmt_command = "goimports"
+
+" highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
