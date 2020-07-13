@@ -31,6 +31,7 @@ Plugin 'hashivim/vim-terraform'
 Plugin 'vimwiki/vimwiki'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'cespare/vim-toml'
 call vundle#end()
 
 colorscheme Tomorrow-Night
@@ -64,7 +65,7 @@ set ttyfast                " Faster redrawing
 set lazyredraw             " Only redraw when necessary
 
 " Spell-checking for Markdown files only
-autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md, *.txt setlocal spell
 
 " Set the leader key
 let mapleader = ","
