@@ -100,11 +100,8 @@ let g:jsx_ext_required = 0
 " For vim-slim to make highlighting work
 autocmd BufNewFile,BufRead *.slim set ft=slim
 
-" disable running gopls (from vim-go plugin)
-" let g:go_gopls_enabled = 0
-
-" run goimports on save
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goimports"   " Run goimports along gofmt on each save
+let g:go_auto_type_info = 1          " Automatically get signature/type info for object under cursor
 
 " highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
