@@ -22,8 +22,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'tomlion/vim-solidity'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -32,9 +30,11 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'cespare/vim-toml'
+Plugin 'shmup/vim-sql-syntax'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 call vundle#end()
 
-colorscheme Tomorrow-Night
+colorscheme dracula
 
 filetype plugin indent on  " Load plugins according to detected filetype
 syntax on                  " Enable syntax highlighting
