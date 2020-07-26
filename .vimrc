@@ -31,10 +31,12 @@ Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'cespare/vim-toml'
 Plugin 'shmup/vim-sql-syntax'
-Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'drewtempelmeyer/palenight.vim'
 call vundle#end()
 
-colorscheme dracula
+set background=dark
+colorscheme palenight
+let g:airline_theme = "palenight"
 
 filetype plugin indent on  " Load plugins according to detected filetype
 syntax on                  " Enable syntax highlighting
