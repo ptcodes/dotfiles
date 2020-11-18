@@ -1,44 +1,41 @@
 set nocompatible      " We're running Vim, not Vi!
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
-
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rhysd/vim-crystal'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-haml'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mxw/vim-jsx'
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'kien/ctrlp.vim'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'hashivim/vim-terraform'
-Plugin 'vimwiki/vimwiki'
-Plugin 'fatih/vim-go'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'cespare/vim-toml'
-Plugin 'shmup/vim-sql-syntax'
-Plugin 'drewtempelmeyer/palenight.vim'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'rhysd/vim-crystal'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-haml'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mxw/vim-jsx'
+Plug 'mtscout6/vim-cjsx'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'pangloss/vim-javascript'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
+Plug 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plug 'kien/ctrlp.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'hashivim/vim-terraform'
+Plug 'vimwiki/vimwiki'
+Plug 'fatih/vim-go'
+Plug 'leafgarland/typescript-vim'
+Plug 'cespare/vim-toml'
+Plug 'shmup/vim-sql-syntax'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim'
+call plug#end()
 
 set background=dark
 colorscheme palenight
 let g:airline_theme = "palenight"
 
-filetype plugin indent on  " Load plugins according to detected filetype
 syntax on                  " Enable syntax highlighting
 
 set encoding=utf8          " Set utf8 as the default encoding
